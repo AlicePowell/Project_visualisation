@@ -23,7 +23,7 @@ def percentage_visualisation(percentage):
     # Use Exception Handling in case the background image doesn't load
     BLACK, CORAL, DUSK, PALE = (0, 0, 0), ('#ffd6d1'), ('#5f7285'), ('#FCFFFA')
     try: 
-        background_image = py.image.load("bleached_sunset3.jpg").convert()
+        background_image = py.image.load("bleached_sunset.jpg").convert()
         background_image = py.transform.scale(background_image, (WIDTH, HEIGHT))
         key = 'hasimage'
     except FileNotFoundError:
@@ -93,8 +93,8 @@ def percentage_visualisation(percentage):
     titlelabela = myfont.render(f"We want {target_percentage}% of the Tech Industry to be made up of strong, brilliant, creative, innovative WOMEN", True, (DUSK))
     titlelabelb = myfont.render(f"How perfect that would feel!", True, (DUSK))
     label1 = myfont.render(f"Imagine {target_percentage}% of the UK Tech workforce were women...", True, (DUSK))
-    label2 = myfont.render(f" but sadly today only {percentage}% are women", True, (DUSK))
-    creditlabel = creditfont.render("Designed and coded by Alice Powell, November 2022.  Inspired by Georg Nees, 'Schotter', 1968", True, (PALE))
+    label2 = myfont.render(f" but in fact only {percentage}% today are women", True, (DUSK))
+    creditlabel = creditfont.render("Designed and created by Alice Powell, November 2022.  Inspired by Georg Nees, 'Schotter', 1968", True, (PALE))
    
 
     
@@ -112,7 +112,7 @@ def percentage_visualisation(percentage):
         screen.blit(titlelabela, (WIDTH - 819, 25))
         screen.blit(titlelabelb, (WIDTH - 819, 45))
         screen.blit(label1, (WIDTH - 820, (MID_HEIGHT) + 320))
-        screen.blit(label2, (WIDTH - 423, (MID_HEIGHT) + 320))
+        screen.blit(label2, (WIDTH - 427, (MID_HEIGHT) + 320))
         screen.blit(creditlabel, (20, HEIGHT - 21))
 
         # check for the exit  
@@ -189,10 +189,5 @@ def create_blockgrid(percentage, target_percentage, a, b, block_size):
     return (position_list)
 
 
-# Add unit test to check if works for 51% and 1% and 60% - tick
-# Backgroud image loading
-# No font
-
-# Call function
 percentage_visualisation(13)
 
