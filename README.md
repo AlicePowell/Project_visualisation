@@ -11,6 +11,6 @@ jpeg file -   bleached_sunset.jpg
 
 ***
 
-First install pygame package in the terminal using the pip tool:
+Packages to install - pygame - Install in the terminal using the pip tool:
 
 pip install pygame
